@@ -3,6 +3,7 @@ from sports import Sport
 from channel import Channel
 from channel_sub_cat import ChannelSubCat
 
+
 EVENT_ID = "33254789"
 EVENT_NAME = "Test genius event"
 
@@ -13,6 +14,7 @@ SPORT_ID = Sport.AMERICAN_FOOTBALL.value
 CHANNEL_ID = Channel.WEB.value
 CHANNEL_SUB_CAT_ID = ChannelSubCat.WEB.value
 
+
 def show_select_queries():
     QUERY_TBL_SPORT_EVENT = f"""
 SELECT * FROM DATA_VIDEO.TBL_SPORT_EVENT
@@ -20,6 +22,27 @@ SELECT * FROM DATA_VIDEO.TBL_SPORT_EVENT
 """
 
     print(QUERY_TBL_SPORT_EVENT)
+    
+    QUERY_TBL_SCHEDULE_ITEM = f"""
+SELECT * FROM DATA_VIDEO.TBL_SCHEDULE_ITEM
+	WHERE VIDEO_ITEM_ID = {VIDEO_ITEM_ID};
+"""
+
+    print(QUERY_TBL_SCHEDULE_ITEM)
+
+    QUERY_TBL_MAPPED_ENTITIES = f"""
+SELECT * FROM TBL_MAPPED_ENTITIES
+    WHERE VIDEO_ITEM_ID = {VIDEO_ITEM_ID};
+"""
+
+    print(QUERY_TBL_MAPPED_ENTITIES)
+    
+    QUERY_TBL_STREAM_STATE = f"""
+SELECT * FROM TBL_STREAM_STATE
+    WHERE VIDEO_ITEM_ID = {VIDEO_ITEM_ID};
+"""
+
+    print(QUERY_TBL_STREAM_STATE)
 
 
 def show_insert_queries():    
@@ -94,9 +117,9 @@ WHERE VIDEO_ITEM_ID = {VIDEO_ITEM_ID};
 
 
 def main():
-    # show_select_queries()
+    show_select_queries()
     # show_insert_queries()
-    show_update_queries()
+    # show_update_queries()
 
 
 if __name__ == "__main__":
