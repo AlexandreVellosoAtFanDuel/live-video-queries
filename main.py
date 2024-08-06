@@ -1,13 +1,17 @@
 from providers import Provider
 from sports import Sport
+from channel import Channel
+from channel_sub_cat import ChannelSubCat
 
 EVENT_ID = "33254789"
 EVENT_NAME = "Test genius event"
 
 VIDEO_ITEM_ID = 177605698
 PROVIDER_ID = Provider.GENIUS.value
-PROVIDER_EVENT_ID = 91783951
+PROVIDER_EVENT_ID = 20000146689
 SPORT_ID = Sport.AMERICAN_FOOTBALL.value
+CHANNEL_ID = Channel.WEB.value
+CHANNEL_SUB_CAT_ID = ChannelSubCat.WEB.value
 
 def show_select_queries():
     QUERY_TBL_SPORT_EVENT = f"""
@@ -38,7 +42,7 @@ VALUES
     ({VIDEO_ITEM_ID}, {PROVIDER_ID}, '{PROVIDER_EVENT_ID}', '{EVENT_NAME}', '{SPORT_ID}', CURRENT_TIMESTAMP - INTERVAL '1' HOUR, null, 'NFL',
      null, null, null, null, null, null, null,
      CURRENT_TIMESTAMP - INTERVAL '1' HOUR, null, null, null, null, null, 1,
-     300, 0, 1, 1, 'N', 'A', 'N', 1, 'ie1-vhs01a-nxt.nxt.betfair',
+     300, 0, {CHANNEL_ID}, {CHANNEL_SUB_CAT_ID}, 'N', 'A', 'N', 1, 'ie1-vhs01a-nxt.nxt.betfair',
      CURRENT_TIMESTAMP, '10.204.152.17', 2, CURRENT_TIMESTAMP, null, null, 3);
 """
 
@@ -80,9 +84,9 @@ SET PROVIDER_ID = {PROVIDER_ID},
     PROVIDER_EVENT_NAME = '{EVENT_NAME}',
     PROVIDER_SPORTS_TYPE = {SPORT_ID},
     PROVIDER_STARTTIME_GMT = CURRENT_TIMESTAMP,
-    PROVIDER_ENDTIME_GMT = CURRENT_TIMESTAMP  + INTERVAL '5' DAY,
+    PROVIDER_ENDTIME_GMT = NULL,
     OVERRIDE_STARTTIME_GMT = CURRENT_TIMESTAMP,
-    OVERRIDE_ENDTIME_GMT  = CURRENT_TIMESTAMP  + INTERVAL '5' DAY
+    OVERRIDE_ENDTIME_GMT  = NULL
 WHERE VIDEO_ITEM_ID = {VIDEO_ITEM_ID};
 """
 
