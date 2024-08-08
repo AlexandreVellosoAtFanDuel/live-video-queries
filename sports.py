@@ -2,6 +2,7 @@ from enum import Enum
 
 class Sport(Enum):
     AMERICAN_FOOTBALL=6423
+    GOLF=3
     
 # -1	Other sports types
 # 1	Football
