@@ -89,10 +89,10 @@ VALUES
     print(QUERY_TBL_MAPPED_ENTITES)
 
     QUERY_TBL_STREAM_STATE = f"""
-    INSERT INTO TBL_STREAM_STATE
-    (VIDEO_ITEM_ID, STREAM_STATE, FACET_STATE)
-    VALUES
-        ({VIDEO_ITEM_ID},'STREAM','OPEN')
+INSERT INTO TBL_STREAM_STATE
+(VIDEO_ITEM_ID, STREAM_STATE, FACET_STATE)
+VALUES
+    ({VIDEO_ITEM_ID},'STREAM','OPEN')
 ;
     """
 
@@ -140,10 +140,19 @@ WHERE VIDEO_ITEM_ID = {VIDEO_ITEM_ID}
 
     print(QUERY_TBL_MAPPED_ENTITIES)
 
+    QUERY_TBL_STREAM_STATE = f"""
+UPDATE TBL_STREAM_STATE 
+	SET STREAM_STATE = 'STREAM',
+	    FACET_STATE = 'OPEN'
+	WHERE VIDEO_ITEM_ID = {VIDEO_ITEM_ID};
+"""
+
+    print(QUERY_TBL_STREAM_STATE)
+
 
 def main():
-    # show_select_queries()
-    # show_insert_queries()
+    show_select_queries()
+    show_insert_queries()
     show_update_queries()
 
 
