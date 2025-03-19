@@ -1,8 +1,10 @@
 from enum import Enum
 
 class Sport(Enum):
-    AMERICAN_FOOTBALL=6423
+    TENNIS=2
     GOLF=3
+    AMERICAN_FOOTBALL=6423
+    BASKETBALL=7522
     
 # -1	Other sports types
 # 1	Football
@@ -10,14 +12,11 @@ class Sport(Enum):
 # 4339	Greyhounds Racing
 # 998918	Bowls
 # 7524	Ice Hockey
-# 7522	Basketball
 # 998917	Volleyball
 # 468328	Handball
 # 4	Cricket
 # 3503	Darts
 # 6422	Snooker
-# 2	Tennis
-# 3	Golf
 # 5	Rugby Union
 # 6	Boxing
 # 8	Motor Sport
@@ -31,7 +30,6 @@ class Sport(Enum):
 # 10	Specials
 # 11	Cycling
 # 3988	Unknown Sport (3988)
-# 6423	American Football
 # 7523	Hockey
 # 61420	Australian Rules
 # 72382	Nine-Ball
