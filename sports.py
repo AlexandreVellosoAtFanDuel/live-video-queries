@@ -5,6 +5,7 @@ class Sport(Enum):
     GOLF=3
     AMERICAN_FOOTBALL=6423
     BASKETBALL=7522
+    UNKNOWN_3988=3988
     
 # -1	Other sports types
 # 1	Football
