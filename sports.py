@@ -7,52 +7,49 @@ class Sport(Enum):
         obj.description = description
         return obj
     
+    OTHER_SPORTS=(-1, 'Other sports types')
     FOOTBALL=(1, 'Football')
-    TENNIS=(2, "Tennis")
-    GOLF=(3, "Golf")
-    AMERICAN_FOOTBALL=(6423, "American Football")
-    BASKETBALL=(7522, "Basketball")
-    UNKNOWN_3988=(3988, "Unknown Sport (3988)")
-    
-# -1	Other sports types
-# 1	Football
-# 7	Horseracing
-# 4339	Greyhounds Racing
-# 998918	Bowls
-# 7524	Ice Hockey
-# 998917	Volleyball
-# 468328	Handball
-# 4	Cricket
-# 3503	Darts
-# 6422	Snooker
-# 5	Rugby Union
-# 6	Boxing
-# 8	Motor Sport
-# 7511	Baseball
-# 1477	Rugby League
-# 998920	Floorball
-# 998919	Bandy
-# 627555	Badminton
-# 2872194	Beach Volleyball
-# 27454571	Esports
-# 10	Specials
-# 11	Cycling
-# 3988	Unknown Sport (3988)
-# 7523	Hockey
-# 61420	Australian Rules
-# 72382	Nine-Ball
-# 136332	Chess
-# 300000	Testing 1
-# 451485	Skiing
-# 620576	Unknown Sport (620576)
-# 2378961	Politics
-# 2901849	Water Polo
-# 3088925	Unknown Sport (3088925)
-# 4726642	Surfing
-# 15826206	Unknown Sport (15826206)
-# 26420387	Mixed Martial Arts
-# 27589895	Testing 2
-# 28347305	Unknown Sport (28347305)
-# 29125756	Lottery
-# 2593174	Table Tennis
-# 606611	Netball
+    TENNIS=(2, 'Tennis')
+    GOLF=(3, 'Golf')
+    CRICKET=(4, 'Cricket')
+    RUGBY_UNION=(5, 'Rugby Union')
+    BOXING=(6, 'Boxing')
+    HORSERACING=(7, 'Horseracing')
+    MOTOR_SPORT=(8, 'Motor Sport')
+    SPECIALS=(10, 'Specials')
+    CYCLING=(11, 'Cycling')
+    RUGBY_LEAGUE=(1477, 'Rugby League')
+    DARTS=(3503, 'Darts')
+    UNKNOWN_3988=(3988, 'Unknown Sport (3988)')
+    GREYHOUNDS_RACING=(4339, 'Greyhounds Racing')
+    SKIING=(451485, 'Skiing')
+    HANDBALL=(468328, 'Handball')
+    TABLE_TENNIS=(2593174, 'Table Tennis')
+    POLITICS=(2378961, 'Politics')
+    BEACH_VOLLEYBALL=(2872194, 'Beach Volleyball')
+    WATER_POLO=(2901849, 'Water Polo')
+    LOTTERY=(29125756, 'Lottery')
+    UNKNOWN_3088925=(3088925, 'Unknown Sport (3088925)')
+    UNKNOWN_620576=(620576, 'Unknown Sport (620576)')
+    NETBALL=(606611, 'Netball')
+    AUSTRALIAN_RULES=(61420, 'Australian Rules')
+    NINE_BALL=(72382, 'Nine-Ball')
+    CHESS=(136332, 'Chess')
+    UNKNOWN_15826206=(15826206, 'Unknown Sport (15826206)')
+    UNKNOWN_28347305=(28347305, 'Unknown Sport (28347305)')
+    TESTING_1=(300000, 'Testing 1')
+    TESTING_2=(27589895, 'Testing 2')
+    ESPORTS=(27454571, 'Esports')
+    SURFING=(4726642, 'Surfing')
+    MIXED_MARTIAL_ARTS=(26420387, 'Mixed Martial Arts')
+    AMERICAN_FOOTBALL=(6423, 'American Football')
+    SNOOKER=(6422, 'Snooker')
+    BADMINTON=(627555, 'Badminton')
+    BASEBALL=(7511, 'Baseball')
+    BASKETBALL=(7522, 'Basketball')
+    HOCKEY=(7523, 'Hockey')
+    ICE_HOCKEY=(7524, 'Ice Hockey')
+    VOLLEYBALL=(998917, 'Volleyball')
+    BOWLS=(998918, 'Bowls')
+    BANDBY=(998919, 'Bandy')
+    FLOORBALL=(998920, 'Floorball')
