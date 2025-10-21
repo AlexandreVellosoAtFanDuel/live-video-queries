@@ -75,6 +75,8 @@ VALUES
 ;
 """
 
+    print(QUERY_TBL_SCHEDULE_ITEM)
+
     QUERY_TBL_MAPPING_REQUEST = f"""
 INSERT INTO DATA_VIDEO.TBL_MAPPING_REQUEST
 (MAPPING_REQUEST_ID, VIDEO_ITEM_ID, EVENT_ID, RACE_ID, CREATED_AT, CREATED_BY, BRAND_ID)
@@ -82,8 +84,6 @@ VALUES(1, {VIDEO_ITEM_ID}, '{EVENT_ID}', NULL, NULL, '1', 3);
     """
     
     print(QUERY_TBL_MAPPING_REQUEST)
-
-    print(QUERY_TBL_SCHEDULE_ITEM)
 
     QUERY_TBL_MAPPED_ENTITES = f"""
 INSERT INTO TBL_MAPPED_ENTITIES
@@ -159,9 +159,9 @@ UPDATE TBL_STREAM_STATE
 
 
 def main():
-    show_select_queries()
+    # show_select_queries()
     show_insert_queries()
-    show_update_queries()
+    # show_update_queries()
 
 
 if __name__ == "__main__":

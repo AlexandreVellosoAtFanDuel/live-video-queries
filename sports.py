@@ -1,11 +1,18 @@
 from enum import Enum
 
 class Sport(Enum):
-    TENNIS=2
-    GOLF=3
-    AMERICAN_FOOTBALL=6423
-    BASKETBALL=7522
-    UNKNOWN_3988=3988
+    def __new__(cls, value, description):
+        obj = object.__new__(cls)
+        obj._value_ = value
+        obj.description = description
+        return obj
+    
+    FOOTBALL=(1, 'Football')
+    TENNIS=(2, "Tennis")
+    GOLF=(3, "Golf")
+    AMERICAN_FOOTBALL=(6423, "American Football")
+    BASKETBALL=(7522, "Basketball")
+    UNKNOWN_3988=(3988, "Unknown Sport (3988)")
     
 # -1	Other sports types
 # 1	Football
